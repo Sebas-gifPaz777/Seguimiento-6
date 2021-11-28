@@ -62,7 +62,33 @@ public class ControllerModel {
 	}
 	
 	public void bubbleSort() {
+		int tam=country.size();
 		
+		while(tam>0) {
+			for(int i=0;i<country.size()-1;i++) {
+				Contries aux=country.get(i);
+				if(aux.comparetoBubble(country.get(i+1))>0){
+					country.set(i,country.get(i+1));
+					country.set(i+1, aux);
+				}
+			}
+			tam--;
+		}
 	}
+	
+	public void insertSort() {
+		Contries aux;
+		int j;
+		for(int i=1;i<country.size();i++) {
+			aux=country.get(i);
+			j=i-1;
+			while(j>=0 && aux.comparetoBubble(country.get(j))<0) {
+				country.set(j, country.get(j+1));
+				j--;
+			}
+			country.set(i,country.get(j+1));
+		}
+	}
+	
 }
 

@@ -66,17 +66,44 @@ public class Contries implements Comparable<Contries> {
 			return -1;
 		}
 		else {
-			if(goldf>otherobj.getSilverf()) {
+			if(silverf>otherobj.getSilverf()) {
 				return 1;
 			}
-			else if(goldf<otherobj.getSilverf()) {
+			else if(silverf<otherobj.getSilverf()) {
 				return -1;
 			}
 			else {
-				if(goldf>otherobj.getBroncef()) {
+				if(broncef>otherobj.getBroncef()) {
 					return 1;
 				}
-				else if(goldf<otherobj.getBroncef()) {
+				else if(broncef<otherobj.getBroncef()) {
+					return -1;
+				}
+				else
+					return 0;
+			}
+		}
+	}
+	
+	public int comparetoBubble(Contries otherobj) {
+		if(goldc>otherobj.getGoldc()) {
+			return 1;
+		}
+		else if(goldc<otherobj.getGoldc()) {
+			return -1;
+		}
+		else {
+			if(silverc>otherobj.getSilverc()) {
+				return 1;
+			}
+			else if(silverc<otherobj.getSilverc()) {
+				return -1;
+			}
+			else {
+				if(bronzec>otherobj.getBronzec()) {
+					return 1;
+				}
+				else if(bronzec<otherobj.getBronzec()) {
 					return -1;
 				}
 				else
